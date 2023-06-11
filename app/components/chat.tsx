@@ -15,8 +15,6 @@ import MinIcon from "../icons/min.svg";
 import ResetIcon from "../icons/reload.svg";
 import BreakIcon from "../icons/break.svg";
 import SettingsIcon from "../icons/chat-settings.svg";
-import UctIcon from "../icons/hread.svg";
-import Lan from "../icons/lan.svg";
 
 import LightIcon from "../icons/light.svg";
 import DarkIcon from "../icons/dark.svg";
@@ -416,46 +414,7 @@ export function ChatActions(props: {
       >
         <BreakIcon />
       </div>
-
-      <div
-        className={`${chatStyle['chat-input-action']} clickable`}
-        onClick={() => {
-          setPopupOpen(true);
-        }}
-      >
-        <div className={`${chatStyle['listimg']} clickable`}>
-          <Lan className={`${chatStyle['listimg-w']} clickable`} />
-        </div>
-      </div>
-
-      {popupOpen && (
-        <div className={chatStyle.popupOverlay} onClick={() => setPopupOpen(false)}>
-          <div className={chatStyle.popup} onClick={(e) => e.stopPropagation()}>
-            <button className={chatStyle.popupCloseButton} onClick={() => setPopupOpen(false)}>
-              x
-            </button>
-            <div>
-            </div>
-            <p className={chatStyle.popupText}>
-              <h1>打印店开业啦~</h1>
-              欢迎各位来到兰园食堂三楼A10
-              <hr /> —— ❤印巷AI图文❤ —— 打印店
-              <p>QQ群：810208834 / 加QQ群主更享提前预约，不定时送楼下</p>
-              <p>专业设备打印，一对一调试，价格亲民，毕业生更享八折</p>
-              <p>———— 不服来印 ————</p>
-            </p>
-          </div>
-        </div>
-      )}
-
-      <div
-        className={`${chatStyle["chat-input-action"]} clickable`}
-      >
-        <div className={`${chatStyle["listimg"]} clickable`}>
-          <UctIcon/>
-        </div>
-      </div>
-      
+         
     </div>
   );
 }
